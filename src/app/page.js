@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Navbar from './components/Navbar'
-import PageTitle from './components/PageTitle';
-import PageContent from './components/PageContent'; 
+import PageTitle from './components/PageTitle.js';
+import PageContent from './components/PageContent.js'; 
 
 export default function Home() {
   return ( 
