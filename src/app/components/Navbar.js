@@ -1,4 +1,4 @@
-import { TrophyIcon } from '@heroicons/react/24/solid'
+import { TrophyIcon } from '@heroicons/react/24/solid';
 
 const navbarList = [
     {
