@@ -13,7 +13,7 @@ export const revalidate = 0
 
 export default async function Home() {
 
-const{ data: cards, error } = await supabase.from('Cards').select()
+const{ data: cards, error } = await supabase.from('cards').select()
 
   return ( 
     <div>
