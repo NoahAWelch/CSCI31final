@@ -4,15 +4,26 @@ import PageTitle from './components/pageTitle'
 import PageContent from './components/pageContent' 
 import Card from './components/Card'
 
-export default function Home() {
+import { createClient } from '@supabase/supabase-js'
+
+// Create a single supabase client for interacting with your database
+const supabase = createClient('https://nsahzrfqusigvxxhcksh.supabase.co', process.env.SUPABASE_SERVICE_ROLE_KEY)
+
+export const revalidate = 0
+
+export default async function Home() {
+
+const{ data: cards, error } = await supabase.from('Cards').select()
+
   return ( 
     <div>
       <Navbar />
       <PageTitle title="Home" /> 
       <PageContent content="Content"className="flex grow" >
-      <Card title="title1" subtitle="subtitle1" img="https://th.bing.com/th?id=OIP.1YM53mG10H_U25iPjop83QHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2" description="description1"/> 
-      <Card title="title2" subtitle="subtitle2" img="https://th.bing.com/th?id=OIP.1YM53mG10H_U25iPjop83QHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2" description="description2"/> 
-      <Card title="title3" subtitle="subtitle3" img="https://th.bing.com/th?id=OIP.1YM53mG10H_U25iPjop83QHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2" description="description3"/> 
+        {cards && cards.map((card, idx) => (
+          <Card key={idx} title={card.title} subtitle={card.subtitle} description={card.description}/> 
+        ))}
+      
       </PageContent>
     </div>
   )
