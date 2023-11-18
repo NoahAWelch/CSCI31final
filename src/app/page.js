@@ -21,7 +21,7 @@ const{ data: cards, error } = await supabase.from('cards').select()
       <PageTitle title="Home" /> 
       <PageContent content="Content"className="flex grow" >
         {cards && cards.map((card, idx) => (
-          <Card key={idx} title={card.title} subtitle={card.subtitle} description={card.description}/> 
+          <Card key={idx} title={card.title} subtitle={card.subtitle} description={card.description} img={card.img}/> 
         ))}
       
       </PageContent>
