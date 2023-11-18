@@ -7,7 +7,7 @@ export default function contact() {
   return ( 
     <div>
     <Navbar />
-    <PageTitle title="Contact" />
+    <PageTitle title="Science" />
     <PageContent content="content" />
   </div>
   )
