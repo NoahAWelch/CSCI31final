@@ -7,7 +7,7 @@ export default function About() {
   return ( 
     <div>
     <Navbar />
-    <PageTitle title="About" />
+    <PageTitle title="Geography" />
     <PageContent content="Content" />
   </div>
   )
