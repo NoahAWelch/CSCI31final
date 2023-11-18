@@ -7,7 +7,7 @@ export default function services() {
   return ( 
     <div>
     <Navbar />
-    <PageTitle title="Services" />
+    <PageTitle title="History" />
     <PageContent content="Content" />
   </div>
   )
