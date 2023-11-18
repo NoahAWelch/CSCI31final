@@ -7,22 +7,22 @@ const navbarList = [
     },
 
     {
-        title: 'about',
+        title: 'Geography',
         href: '/about',
     },
 
     {
-        title: 'contact',
+        title: 'Science',
         href: '/contact',
     },
 
     {
-        title: 'services',
+        title: 'History',
         href: '/services',
     },
 
     {
-        title: 'products',
+        title: 'Pop Culture',
         href: '/products',
     },
 ]
