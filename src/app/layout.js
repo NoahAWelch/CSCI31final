@@ -11,7 +11,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={'${inter.className} bg-gradient-to-r from-blue-300 to-blue-900'}>{children}</body>
+      <body className={'${inter.className} bg-gradient-to-r from-blue-300 to-blue-900 text-2xl'}>{children}</body>
+    <footer className="text-center">hello</footer>
     </html>
   )
 }
