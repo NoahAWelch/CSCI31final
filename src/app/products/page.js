@@ -7,7 +7,7 @@ export default function products() {
   return ( 
     <div>
     <Navbar />
-    <PageTitle title="Products" />
+    <PageTitle title="Pop Culture" />
     <PageContent content="Content" />
   </div>
   )
