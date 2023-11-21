@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import PageTitle from '../components/pageTitle'
 import PageContent from '../components/pageContent'
-import Footer from '../components/Footer'
 
 import { createClient } from '@supabase/supabase-js';
 
@@ -10,17 +9,17 @@ const supabase = createClient('https://nsahzrfqusigvxxhcksh.supabase.co', proces
 
 export const revalidate = 0
 
-export default function contact() {
+export default function About() {
 
-  const{ data: science, error } = supabase.from('science').select()
+  const{ data: geography, error } = supabase.from('geography').select()
 
   return ( 
     <div>
     <Navbar />
-    <PageTitle title="Science" />
+    <PageTitle title="Geography" />
     <PageContent content="Content" >
-    {science && science.map((sciences, idx) => (
-          <Card key={idx} title={sciences.title} subtitle={sciences.subtitle} description={sciences.description} img={sciences.img}/> 
+    {geography && geography.map((geographies, idx) => (
+          <Card key={idx} title={geographies.title} subtitle={geographies.subtitle} description={geographies.description} img={geographies.img}/> 
         ))} 
       </PageContent>
   </div>
