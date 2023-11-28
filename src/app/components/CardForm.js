@@ -18,7 +18,7 @@ async function createCard(formData) {
   }
   
   export default function CardForm() {
-    return <form action={createCard} className="p-3 bg-blue-400 m-2 rounded-lg">
+    return ( <form action={createCard} className="p-3 bg-blue-400 m-2 rounded-lg">
         <Field>
             <Label label="title"/>
             <Input id="title" name="title" />
@@ -39,4 +39,5 @@ async function createCard(formData) {
         <Button type ="submit">Add Card</Button>
         </div>
         </form>
+      )
   }
