@@ -11,7 +11,7 @@ async function createCard(formData) {
     const subtitle = formData.get('subtitle')
     const img = formData.get('img')
     const description = formData.get('description')
-    insertCard(formData)
+    insertCard(title, subtitle, img, description)
     redirect('/')
     // get each field out of formData 
     // call supabase-client insertCard
