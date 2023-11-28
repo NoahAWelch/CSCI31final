@@ -2,7 +2,7 @@ import Button from "./Button"
 import Field from "./Field"
 import Label from "./Label"
 import Input from "./Input"
-//import { insertCard } from "../utils/supabase-client"
+import { insertCard } from "../utils/supabase-client"
 import { redirect } from 'next/navigation'
 async function createCard(formData) {
     'use server'
