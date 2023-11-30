@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import PageTitle from '../components/pageTitle'
 import PageContent from '../components/pageContent'
 import Footer from '../components/Footer'
+import Card from '../components/Card'
 
 import { createClient } from '@supabase/supabase-js';
 
