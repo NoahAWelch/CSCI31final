@@ -4,6 +4,7 @@ import PageTitle from '../components/pageTitle'
 import PageContent from '../components/pageContent'
 import CardForm from '../components/CardForm'
 import { createClient } from '@supabase/supabase-js';
+import Card from '../components/Card'
 
 const supabase = createClient('https://nsahzrfqusigvxxhcksh.supabase.co', process.env.SUPABASE_SERVICE_ROLE_KEY)
 
