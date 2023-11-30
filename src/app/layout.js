@@ -1,5 +1,9 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+//import { Analytics } from '@vercel/analytics/react'
+import '@radix-ui/themes/styles.css';
+
+import { Theme, ThemePanel } from '@radix-ui/themes';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +15,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={'${inter.className} bg-gradient-to-r from-blue-300 to-blue-900 flex flex-col min-h-screen text-2xl'}>{children}</body>
+     <Theme>
+  <body className={`${inter.className} bg-gradient-to-r from-blue-300 to-blue-900 flex flex-col min-h-screen text-2xl`}>
+    {children}
+  
+  </body>
+  <ThemePanel />
+</Theme>
       <footer className="text-center">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:justify-between">
       <span className="text-sm text-black bold sm:text-center">© 2023 <a href="#" className="hover:underline text-black bold">CSCI-25™</a>. All
