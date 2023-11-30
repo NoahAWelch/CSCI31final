@@ -15,5 +15,4 @@ export async function findCards() {
   const supabase = getClient()
   const{ data: cards, error } = await supabase.from('cards').select()
   return cards
-  // implements https://supabase.com/docs/reference/javascript/select
 }
