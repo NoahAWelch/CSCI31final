@@ -25,6 +25,10 @@ const navbarList = [
         title: 'Pop Culture',
         href: '/products',
     },
+     {
+        title: 'Answer Sheet',
+        href: '/answers',
+    },
 ]
 
 export default function Navbar(){
