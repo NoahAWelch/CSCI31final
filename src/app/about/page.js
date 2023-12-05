@@ -7,6 +7,9 @@ import { createClient } from '@supabase/supabase-js';
 import Card from '../components/Card'
 import MyTable from '../components/MyTable'
 import { findCards } from '../utils/supabase-client'
+import { findMyGeoCards } from '../utils/supabase-client'
+import GeographyCard from '../components/GeographyCard'
+
 
 export const revalidate = 0
 
@@ -37,7 +40,7 @@ const supabase = createClient('https://nsahzrfqusigvxxhcksh.supabase.co', proces
 
 export default async function About() {
 const cards = await findCards()
-  const{ data: geography, error } = supabase.from('geography').select()
+  const geography = await findMyGeoCards()
 
   return ( 
     <div>
@@ -45,7 +48,7 @@ const cards = await findCards()
     <PageTitle title="Geography" />
     <PageContent content="Content" >
     {geography && geography.map((geographies, idx) => (
-          <Card key={idx} title={geographies.title} subtitle={geographies.subtitle} description={geographies.description} img={geographies.img}/> 
+          <GeographyCard key={idx} key={idx} Question={geographies.Question} Answer1={geographies.Answer1} Answer2={geographies.Answer2} Answer3={geographies.Answer3} Answer4={geographies.Answer4}/> 
         ))} 
       </PageContent>
       <CardForm />
