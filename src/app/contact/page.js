@@ -3,17 +3,17 @@ import Navbar from '../components/Navbar'
 import PageTitle from '../components/pageTitle'
 import PageContent from '../components/pageContent'
 import Footer from '../components/Footer'
-import Card from '../components/Card'
-
+import ScienceCard from '../components/ScienceCard'
+import { findMySciCards } from '../utils/supabase-client'
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient('https://nsahzrfqusigvxxhcksh.supabase.co', process.env.SUPABASE_SERVICE_ROLE_KEY)
 
 export const revalidate = 0
 
-export default function contact() {
-
-  const{ data: science, error } = supabase.from('science').select()
+export default async function contact() {
+  const science = await findMySciCards()
+  
 
   return ( 
     <div>
@@ -21,7 +21,7 @@ export default function contact() {
     <PageTitle title="Science" />
     <PageContent content="Content" >
     {science && science.map((sciences, idx) => (
-          <Card key={idx} title={sciences.title} subtitle={sciences.subtitle} description={sciences.description} img={sciences.img}/> 
+          <ScienceCard key={idx} Question={sciences.Question} Answer1={sciences.Answer1} Answer2={sciences.Answer2} Answer3={sciences.Answer3} Answer4={sciences.Answer4}/> 
         ))} 
       </PageContent>
   </div>
