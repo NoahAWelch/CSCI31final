@@ -3,7 +3,7 @@ import './globals.css'
 //import { Analytics } from '@vercel/analytics/react'
 import '@radix-ui/themes/styles.css';
 
-import { Theme, ThemePanel } from '@radix-ui/themes';
+import { Theme } from '@radix-ui/themes';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
     {children}
   
   </body>
-  <ThemePanel />
 </Theme>
       <footer className="text-center">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:justify-between">
