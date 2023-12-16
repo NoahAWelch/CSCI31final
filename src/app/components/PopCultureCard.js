@@ -18,11 +18,11 @@ async function createCard(formData) {
     redirect('/about')
   }
 
-export default function PopCultureCard({Question, Answer1, Answer2, Answer3, Answer4}) {
+export default function PopCultureCard({Questions, Answer1, Answer2, Answer3, Answer4}) {
 
 
    return <div className="flex p-1 flex-col justify-evenly grow p-3 transition-all bg-gray-100 shadow-lg text-gray-900 border border-red-300 rounded-lg hover:scale-110 hover:bg-blue-400 bg-gradient-to-r from-blue-300 to-blue-400'">
-      <h1 className=" py-2">{Question}</h1>
+      <h1 className=" py-2">{Questions}</h1>
       <form action={createCard}>
       <Field>
         <Button type="submit">{Answer1}
