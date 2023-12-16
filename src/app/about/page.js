@@ -13,7 +13,6 @@ const supabase = createClient('https://nsahzrfqusigvxxhcksh.supabase.co', proces
 //export const revalidate = 0
 
 export default async function About() {
-const cards = await findCards()
   const geography = await findMyGeoCards()
 
   return ( 
