@@ -1,4 +1,4 @@
-mport Button from "./Button"
+import Button from "./Button"
 import { insertMyPopCard} from "../utils/supabase-client"
 import { redirect } from "next/navigation"
 import Input from "./Input"
