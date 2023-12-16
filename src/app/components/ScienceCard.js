@@ -7,14 +7,6 @@ import Field from "./Field"
 import ButtonInputs from "./ButtonInputs"
 async function createCard(formData) {
     'use server'
-    const Answer3 = formData.get('Answer3')
-    if (formData === Answer3){
-    const Answer3 = formData.get('Answer3')
-    insertMyGeoCard({Answer3})
-}else{
-    const Answer3 = "wrong"
-    insertMyGeoCard({Answer3})
-}
     redirect('/about')
   }
 
