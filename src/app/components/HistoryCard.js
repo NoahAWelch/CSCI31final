@@ -1,5 +1,4 @@
 import Button from "./Button"
-import Button from "./Button"
 import { insertMyCard} from "../utils/supabase-client"
 import { redirect } from "next/navigation"
 import Input from "./Input"
