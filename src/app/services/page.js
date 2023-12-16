@@ -17,7 +17,7 @@ export default async function Services() {
     return ( 
       <div>
          <Navbar />
-         <PageTitle title="Services" /> 
+         <PageTitle title="History" /> 
       <PageContent content="Content" className="flex  basis-1/3" >
       {history&& history.map((historyAnswers, idx) => (
   <HistoryCard key={idx} Question={historyAnswers.Question} Answer1={historyAnswers.Answer1} Answer2={historyAnswers.Answer2}
