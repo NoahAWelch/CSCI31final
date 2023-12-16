@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
      <Theme>
-  <body className={`${inter.className} bg-gradient-to-r from-blue-300 to-blue-900 flex flex-col min-h-screen text-2xl`}>
+  <body className={`${inter.className} bg-gradient-to-r from-blue-300 to-blue-900 flex flex-col text-center min-h-screen text-2xl`}>
     {children}
   
   </body>
