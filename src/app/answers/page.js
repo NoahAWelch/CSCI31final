@@ -28,7 +28,7 @@ export default async function About() {
   return ( 
     <div>
     <Navbar />
-    <PageTitle title="Geography" />
+    <PageTitle title="Answer Sheet" />
     <PageContent content="Content" >
       </PageContent>
       <MyTable columns = {cardTableColumns} records={answers}/>
